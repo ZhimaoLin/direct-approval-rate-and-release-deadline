@@ -11,8 +11,6 @@ def main():
 
         revision_number_without_change = 2
 
-
-
         read_file = pd.read_csv(csv_file_path + repo_name + '.csv')
 
 
@@ -30,7 +28,9 @@ def main():
         # print(review_table[['review_number', 'revision_number', 'status']])
 
         review_table.loc[:, 'start_date'] = pd.Series('xxx', index=review_table.index)
+        review_table.loc[:, 'start_time'] = pd.Series('xxx', index=review_table.index)
         review_table.loc[:, 'close_date'] = pd.Series('===', index=review_table.index)
+        review_table.loc[:, 'close_time'] = pd.Series('===', index=review_table.index)
 
         print(review_table[['review_number', 'start_date', 'close_date']])
 
@@ -46,33 +46,44 @@ def main():
             f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first, 'r')
             lines = f.readlines()
             start_date = ''
+            start_time = ''
 
             for l in lines:
                 if 'date: ' in l:
                     date = l.split()
-                    start_date = date[1] + ' ' + date[2]
+                    start_date = date[1]
+                    start_time = date[2]
                     break
             review_table.loc[index, 'start_date'] = start_date
+            review_table.loc[index, 'start_time'] = start_time
             f.close()
 
             # Find code review close date
             f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last, 'r')
             lines = f.readlines()
             close_date = ''
+            close_time = ''
 
             for l in lines:
                 if 'date: ' in l:
                     date = l.split()
-                    close_date = date[1] + ' ' + date[2]
+                    close_date = date[1]
+                    close_time = date[2]
 
             review_table.loc[index, 'close_date'] = close_date
+            review_table.loc[index, 'close_time'] = close_time
 
             f.close()
 
+        review_table.to_csv(repo_name + '_result.csv')
 
 
 
-        print(review_table[['review_number', 'start_date', 'close_date']])
+
+
+        print('Finish repository: ' + repo_name)
+
+        # print(review_table[['review_number', 'start_date', 'close_date']])
 
 
 
