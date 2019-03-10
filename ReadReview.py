@@ -36,6 +36,7 @@ def main():
 
         # print(review_table[['review_number', 'start_date', 'close_date']])
 
+        skipped_count = 0
 
         for index, row in review_table.iterrows():
             review_number = str(row['review_number'])
@@ -44,24 +45,24 @@ def main():
             discussion_file_name_first = review_number + "_rev1_discussion.txt"
             discussion_file_name_last = review_number + "_rev" + revision_number + "_discussion.txt"
 
-            skiped_first = False
-            skiped_last = False
+            skipped_first = False
+            skipped_last = False
 
             try:
                 f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first, 'r')
                 f.close()
             except:
-                skiped_first = True
-                print('Skiped: ' + txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first)
+                skipped_first = True
+                print('Skipped: ' + txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first)
 
             try:
                 f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last, 'r')
                 f.close()
             except:
-                skiped_last = True
-                print('Skiped: ' + txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last)
+                skipped_last = True
+                print('Skipped: ' + txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last)
 
-            if (not skiped_first) and (not skiped_last):
+            if (not skipped_first) and (not skipped_last):
                 # Find code review start date
                 f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first, 'r')
                 lines = f.readlines()
@@ -94,8 +95,11 @@ def main():
                 review_table.loc[index, 'close_time'] = close_time
 
                 f.close()
+            else:
+                skipped_count += 1
 
         review_table.to_csv(repo_name + '_result.csv')
+        print('Skipped [' + str(skipped_count) + '] reviews out of [' + str(review_table.shape[0]) + '] rows')
         print('Finish repository: ' + repo_name)
 
 
