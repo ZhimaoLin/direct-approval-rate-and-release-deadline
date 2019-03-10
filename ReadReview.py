@@ -5,7 +5,8 @@ def main():
     csv_file_path = './corp/metadata/'
     txt_file_path = './corp/discussion/'
 
-    repo_list = ['indexing']
+    repo_list = ['indexing', 'couchbase-jvm-core', 'eclipse.platform.ui', 'ep-engine', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
+    # repo_list = ['indexing']
 
     for repo_name in repo_list:
 
@@ -17,6 +18,7 @@ def main():
         index = read_file.groupby(['review_number'])['revision_number'].transform(max) == read_file['revision_number']
 
         groupby_table = read_file[index]
+
         review_table = groupby_table[['review_number', 'revision_number', 'status', 'author', 'url']].copy()
 
         # As for the status is "NEW," at most of the cases, the review is rejected.
@@ -32,7 +34,7 @@ def main():
         review_table.loc[:, 'close_date'] = pd.Series('===', index=review_table.index)
         review_table.loc[:, 'close_time'] = pd.Series('===', index=review_table.index)
 
-        print(review_table[['review_number', 'start_date', 'close_date']])
+        # print(review_table[['review_number', 'start_date', 'close_date']])
 
 
         for index, row in review_table.iterrows():
@@ -42,48 +44,63 @@ def main():
             discussion_file_name_first = review_number + "_rev1_discussion.txt"
             discussion_file_name_last = review_number + "_rev" + revision_number + "_discussion.txt"
 
-            # Find code review start date
-            f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first, 'r')
-            lines = f.readlines()
-            start_date = ''
-            start_time = ''
+            skiped_first = False
+            skiped_last = False
 
-            for l in lines:
-                if 'date: ' in l:
-                    date = l.split()
-                    start_date = date[1]
-                    start_time = date[2]
-                    break
-            review_table.loc[index, 'start_date'] = start_date
-            review_table.loc[index, 'start_time'] = start_time
-            f.close()
+            try:
+                f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first, 'r')
+                f.close()
+            except:
+                skiped_first = True
+                print('Skiped: ' + txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first)
 
-            # Find code review close date
-            f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last, 'r')
-            lines = f.readlines()
-            close_date = ''
-            close_time = ''
+            try:
+                f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last, 'r')
+                f.close()
+            except:
+                skiped_last = True
+                print('Skiped: ' + txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last)
 
-            for l in lines:
-                if 'date: ' in l:
-                    date = l.split()
-                    close_date = date[1]
-                    close_time = date[2]
+            if (not skiped_first) and (not skiped_last):
+                # Find code review start date
+                f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_first, 'r')
+                lines = f.readlines()
+                start_date = ''
+                start_time = ''
 
-            review_table.loc[index, 'close_date'] = close_date
-            review_table.loc[index, 'close_time'] = close_time
+                for l in lines:
+                    if 'date: ' in l:
+                        date = l.split()
+                        start_date = date[1]
+                        start_time = date[2]
+                        break
+                review_table.loc[index, 'start_date'] = start_date
+                review_table.loc[index, 'start_time'] = start_time
+                f.close()
 
-            f.close()
+                # Find code review close date
+                f = open(txt_file_path + repo_name + '/' + review_number + '/' + discussion_file_name_last, 'r')
+                lines = f.readlines()
+                close_date = ''
+                close_time = ''
+
+                for l in lines:
+                    if 'date: ' in l:
+                        date = l.split()
+                        close_date = date[1]
+                        close_time = date[2]
+
+                review_table.loc[index, 'close_date'] = close_date
+                review_table.loc[index, 'close_time'] = close_time
+
+                f.close()
 
         review_table.to_csv(repo_name + '_result.csv')
-
-
-
-
-
         print('Finish repository: ' + repo_name)
 
-        # print(review_table[['review_number', 'start_date', 'close_date']])
+
+
+
 
 
 
