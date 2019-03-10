@@ -9,6 +9,7 @@ def main():
     # repo_list = ['indexing']
 
     for repo_name in repo_list:
+        print('Processing repository: ' + repo_name)
 
         revision_number_without_change = 2
 
@@ -100,7 +101,7 @@ def main():
 
         review_table.to_csv(repo_name + '_result.csv')
         print('Skipped [' + str(skipped_count) + '] reviews out of [' + str(review_table.shape[0]) + '] rows')
-        print('Finish repository: ' + repo_name)
+        print('Finish repository: ' + repo_name + '\n')
 
 
 
