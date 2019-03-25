@@ -7,9 +7,11 @@ import os
 g = Github('9fc70c72f642a8979bc0788cdd90d3c9f23cd2a2')
 
 #repo_full_name_list = ['eclipse/eclipse.platform.ui', 'eclipse/linuxtools', 'eclipse/jgit', 'eclipse/egit', 'couchbase/couchbase-jvm-core', 'couchbase/ns_server', 'couchbase/testrunner', 'couchbase/ep-engine', 'couchbase/indexing', 'couchbase/couchbase-java-client', 'couchbase/spymemcached']
+repo_full_name_list = ['eclipse/linuxtools', 'eclipse/jgit', 'eclipse/egit', 'couchbase/couchbase-jvm-core', 'couchbase/ns_server', 'couchbase/testrunner', 'couchbase/ep-engine', 'couchbase/couchbase-java-client', 'couchbase/spymemcached']
+
 
 # repo_full_name_list = ['eclipse/jgit', 'eclipse/egit']
-repo_full_name_list = ['couchbase/couchbase-jvm-core']
+# repo_full_name_list = ['couchbase/couchbase-jvm-core']
 
 try: 	
     os.mkdir('step2_results')
