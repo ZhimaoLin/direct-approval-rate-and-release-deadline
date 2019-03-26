@@ -50,9 +50,10 @@ def main():
 
         # calculate the number for approval rate
         #result[['ApprovalRate']] = result.iloc[:, 2].div(result.iloc[:, 4])
-        result['ApprovalRate'] = result['DirectlyApprove']/result['TotalCommit']
+        result['DirectlyApproveRate'] = result['DirectlyApprove']/result['TotalCommit']
 
-        
+        # calculate the number for approve after change rate
+        result['ApproveAfterChangeRate'] = result['ApproveAfterChange']/result['TotalCommit']
 
         #DirectlyApprove = read_file.loc[read_file['status'] == 'DirectlyApprove','close_date'].unique().tolist()
         #ApproveAfterChange = read_file.loc[read_file['status'] == 'ApproveAfterChange','close_date'].unique().tolist()
