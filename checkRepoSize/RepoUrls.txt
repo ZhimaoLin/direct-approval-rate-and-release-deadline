@@ -1,0 +1,11 @@
+https://github.com/eclipse/eclipse.platform.ui
+https://github.com/eclipse/linuxtools
+https://github.com/eclipse/jgit
+https://github.com/eclipse/egit
+https://github.com/couchbase/couchbase-jvm-core
+https://github.com/couchbase/ns_server
+https://github.com/couchbase/testrunner
+https://github.com/couchbase/ep-engine
+https://github.com/couchbase/indexing
+https://github.com/couchbase/couchbase-java-client
+https://github.com/couchbase/spymemcached
