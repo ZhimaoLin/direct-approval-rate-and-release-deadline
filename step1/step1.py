@@ -86,6 +86,8 @@ def main():
                 skipped_count += 1
 
         print('Skipped [' + str(skipped_count) + '] reviews out of [' + str(review_table.shape[0]) + '] rows')
+        # Clean some invalid rows
+        # It removes a review: 21388 from ns_server repo.
         review_table = review_table.dropna(axis=0)
         review_table.to_csv(os.path.join('./step1_results/', repo_name + '_result.csv'), index=False)
         print('Finish repository: ' + repo_name + '\n')
