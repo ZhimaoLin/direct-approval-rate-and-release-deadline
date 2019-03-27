@@ -1,15 +1,22 @@
 import pandas as pd
 import sys
+import os
 from datetime import datetime
 from datetime import timedelta
 
 def main():
-    csv_file_path = '../step1/'
+
+    try: 	
+        os.mkdir('step3_results')
+    except:
+        print("step3_results folder exists.")
+
+    csv_file_path = '../step1/step1_results/'
     date_file_path = '../step2/step2_results/'
 
     #repo_list = ['indexing', 'couchbase-jvm-core', 'eclipse.platform.ui', 'ep-engine', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
     #repo_list = ['couchbase-jvm-core']
-    repo_list = ['couchbase-jvm-core', 'ep-engine', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
+    repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
     #repo_list = ['couchbase-jvm-core']
 
     date = []
@@ -63,15 +70,15 @@ def main():
         #ApproveAfterChangeByDate = read_file[(read_file['status'] == 'ApproveAfterChange') & read_file['close_date'].isin(DirectlyApprove)].groupby('close_date').size().to_frame('size')
         #RejectedByDate = read_file[(read_file['status'] == 'Rejected') & read_file['close_date'].isin(DirectlyApprove)].groupby('close_date').size().to_frame('size')
 
-        result.to_csv(repo_name + '_final.csv')
+        result.to_csv('./step3_results/' + repo_name + '_final.csv')
        
-        final = pd.read_csv('./' + repo_name + '_final.csv')
+        final = pd.read_csv('./step3_results/' + repo_name + '_final.csv')
 
         # generate a boolean column to define whether the close date close to the commit date
         final['CloseToReleaseDate'] = 'False'
         final.loc[final['close_date'].isin(date), 'CloseToReleaseDate'] = 'True'
 
-        final.to_csv(repo_name + '_final.csv')
+        final.to_csv('./step3_results/' + repo_name + '_final.csv')
 
 
         #print(final)
