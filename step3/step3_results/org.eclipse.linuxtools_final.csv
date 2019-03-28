@@ -1,4 +1,4 @@
-,close_date,ApproveAfterChange,DirectlyApprove,Rejected,TotalCommit,DirectlyApproveRate,ApproveAfterChangeRate,CloseToReleaseDate
+,close_date,ApproveAfterChange,DirectlyApprove,Rejected,TotalReview,DirectlyApproveRate,ApproveAfterChangeRate,CloseToReleaseDate
 0,2012-07-04,0.0,7.0,0.0,7.0,1.0,0.0,True
 1,2012-07-05,1.0,3.0,0.0,4.0,0.75,0.25,True
 2,2012-07-09,0.0,0.0,1.0,1.0,0.0,0.0,False

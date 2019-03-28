@@ -52,15 +52,15 @@ def main():
         result = GroupByStatus.unstack(level=-1).fillna(0)
 
         # calculate the number for total commit
-        result['TotalCommit'] = result.iloc[:,-3:].sum(axis=1)
-        #result['TotalCommit'] = result['ApproveAfterChange']+result['DirectlyApprove']+result['Rejected']
+        result['TotalReview'] = result.iloc[:,-3:].sum(axis=1)
+        #result['TotalReview'] = result['ApproveAfterChange']+result['DirectlyApprove']+result['Rejected']
 
         # calculate the number for approval rate
         #result[['ApprovalRate']] = result.iloc[:, 2].div(result.iloc[:, 4])
-        result['DirectlyApproveRate'] = result['DirectlyApprove']/result['TotalCommit']
+        result['DirectlyApproveRate'] = result['DirectlyApprove']/result['TotalReview']
 
         # calculate the number for approve after change rate
-        result['ApproveAfterChangeRate'] = result['ApproveAfterChange']/result['TotalCommit']
+        result['ApproveAfterChangeRate'] = result['ApproveAfterChange']/result['TotalReview']
 
         #DirectlyApprove = read_file.loc[read_file['status'] == 'DirectlyApprove','close_date'].unique().tolist()
         #ApproveAfterChange = read_file.loc[read_file['status'] == 'ApproveAfterChange','close_date'].unique().tolist()
