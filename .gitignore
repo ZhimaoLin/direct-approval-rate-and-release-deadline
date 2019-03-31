@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 .DS_Store
-step1/corp/
+step1/crop/
 .idea/
 step1/crop.zip
