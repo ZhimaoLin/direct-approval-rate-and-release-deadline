@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 def main():
-    csv_file_path = './corp/metadata/'
-    txt_file_path = './corp/discussion/'
+    csv_file_path = './crop/metadata/'
+    txt_file_path = './crop/discussion/'
 
     try: 	
         os.mkdir('step1_results')
