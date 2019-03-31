@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import os
 import datetime as dt
 
-# repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
-repo_list = ['couchbase-jvm-core']
+repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'linuxtools', 'spymemcached']
+# repo_list = ['couchbase-jvm-core']
 
 year_range_dic = {'couchbase-jvm-core': (2015, 2016), \
                     'ep-engine': (2012, 2016), \
@@ -14,7 +14,7 @@ year_range_dic = {'couchbase-jvm-core': (2015, 2016), \
                     'ns_server': (2011, 2016), \
                     'jgit': (2010, 2016), \
                     'egit': (2010, 2016), \
-                    'org.eclipse.linuxtools': (2013, 2016), \
+                    'linuxtools': (2013, 2016), \
                     'spymemcached': (2011, 2016)}
 
 try: 	
@@ -23,6 +23,8 @@ except:
     print("step4_results folder exists.")
 
 for repo in repo_list:
+    print("Draw plots for repo: " + repo)
+
     csv_file_name = repo + "_final.csv"
     df = pd.read_csv(os.path.join('../step3/step3_results/', csv_file_name))
     df['close_date'] = pd.to_datetime(df['close_date'])
@@ -33,8 +35,6 @@ for repo in repo_list:
     
     
     
-    
-
 
 
     closed_to_release = df.loc[(df.CloseToReleaseDate == True)].copy()

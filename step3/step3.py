@@ -14,17 +14,15 @@ def main():
     csv_file_path = '../step1/step1_results/'
     date_file_path = '../step2/step2_results/'
 
-    #repo_list = ['indexing', 'couchbase-jvm-core', 'eclipse.platform.ui', 'ep-engine', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
-    #repo_list = ['couchbase-jvm-core']
-    # repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
-    repo_list = ['couchbase-jvm-core']
+    repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'linuxtools', 'spymemcached']
+    # repo_list = ['couchbase-jvm-core']
 
     date = []
     for repo_name in repo_list:
         print('Processing csv file: ' + repo_name + '_result.csv')
 
-        if repo_name =='org.eclipse.linuxtools':
-            read_file = pd.read_csv(csv_file_path + repo_name + '_result.csv')
+        if repo_name =='linuxtools':
+            read_file = pd.read_csv(csv_file_path + 'org.eclipse.linuxtools_result.csv')
             release_date = open(date_file_path + 'linuxtools_release_date.csv', "r")
         else:
             read_file = pd.read_csv(csv_file_path + repo_name + '_result.csv')
