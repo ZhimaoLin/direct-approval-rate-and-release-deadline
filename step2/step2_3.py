@@ -18,7 +18,7 @@ print('==============================')
 print('Accessing repo: [' + repo.name + ']')
 
 
-release_date_file_name = os.path.join('./step2_results/', repo_name + "_release_date.txt" )
+release_date_file_name = os.path.join('./step2_results/', repo_name + "_release_date.csv" )
 release_date_file = open(release_date_file_name, "a")
 
 print('Continue getting release date in repo: ' + repo_name + ' after 1 hour.')

@@ -29,7 +29,7 @@ for repo_full_name in repo_full_name_list:
     
 
 
-    release_date_file_name = os.path.join('./step2_results/', repo_name + "_release_date.txt" )
+    release_date_file_name = os.path.join('./step2_results/', repo_name + "_release_date.csv" )
     release_date_file = open(release_date_file_name, "w")
 
     #release_date_file.write('Total number of releases: ' + str(tag_list.totalCount) + '\n')
