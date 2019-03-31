@@ -16,8 +16,8 @@ def main():
 
     #repo_list = ['indexing', 'couchbase-jvm-core', 'eclipse.platform.ui', 'ep-engine', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
     #repo_list = ['couchbase-jvm-core']
-    repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
-    #repo_list = ['couchbase-jvm-core']
+    # repo_list = ['couchbase-jvm-core', 'ep-engine', 'eclipse.platform.ui', 'couchbase-java-client', 'testrunner', 'ns_server', 'jgit', 'egit', 'org.eclipse.linuxtools', 'spymemcached']
+    repo_list = ['couchbase-jvm-core']
 
     date = []
     for repo_name in repo_list:
@@ -25,10 +25,10 @@ def main():
 
         if repo_name =='org.eclipse.linuxtools':
             read_file = pd.read_csv(csv_file_path + repo_name + '_result.csv')
-            release_date = open(date_file_path + 'linuxtools_release_date.txt', "r")
+            release_date = open(date_file_path + 'linuxtools_release_date.csv', "r")
         else:
             read_file = pd.read_csv(csv_file_path + repo_name + '_result.csv')
-            release_date = open(date_file_path + repo_name + '_release_date.txt', "r")
+            release_date = open(date_file_path + repo_name + '_release_date.csv', "r")
 
         # collect release date and store them in a list
         for line in release_date:
@@ -78,8 +78,7 @@ def main():
         final['CloseToReleaseDate'] = 'False'
         final.loc[final['close_date'].isin(date), 'CloseToReleaseDate'] = 'True'
 
-        final.to_csv('./step3_results/' + repo_name + '_final.csv')
-
+        final.to_csv('./step3_results/' + repo_name + '_final.csv', index=False)
 
         #print(final)
 
