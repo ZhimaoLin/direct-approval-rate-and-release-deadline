@@ -2506,7 +2506,6 @@ review_number,revision_number,status,author,url,close_date,close_time
 21331,1,Rejected,Rubi Walsh,http://review.couchbase.org/#/c/21331/1,2012-10-10,23:13:30.529000000
 21386,1,Rejected,Roselyn Villegas,http://review.couchbase.org/#/c/21386/1,2012-12-17,19:04:04.265000000
 21387,1,DirectlyApprove,Nathalie Landry,http://review.couchbase.org/#/c/21387/1,2012-10-05,18:01:21.480000000
-21388,1,Rejected,Essence xxx@xxx.xxx,,2012-10-05,19:04:49.090000000
 21389,1,Rejected,Essence Foley,http://review.couchbase.org/#/c/21389/1,2012-10-05,19:05:03.442000000
 21429,3,Rejected,Roman Murillo,http://review.couchbase.org/#/c/21429/3,2013-07-31,15:14:02.871000000
 21438,3,Rejected,Justice Schneider,http://review.couchbase.org/#/c/21438/3,2012-10-10,02:31:41.302000000
