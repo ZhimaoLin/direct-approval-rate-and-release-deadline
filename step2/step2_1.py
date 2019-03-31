@@ -38,10 +38,10 @@ for repo_full_name in repo_full_name_list:
     print('==============================')
 
     for t in tag_list: 
-        print(t.name)
-        print(t.commit.sha)
-        print(t.commit.commit.committer.date)
-        print('\n')
+        # print(t.name)
+        # print(t.commit.sha)
+        # print(t.commit.commit.committer.date)
+        # print('\n')
 
         #release_date_file.write(str(t.name) + '\n')
         #release_date_file.write(str(t.commit.sha) + '\n')
