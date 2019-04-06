@@ -6,6 +6,8 @@ from datetime import timedelta
 
 def main():
 
+    date_interval = 2
+
     try: 	
         os.mkdir('step3_results')
     except:
@@ -31,12 +33,18 @@ def main():
         # collect release date and store them in a list
         for line in release_date:
             today = datetime.strptime(line.split(' ')[0], '%Y-%m-%d').date()
-            previous = today + timedelta(days=-1)
+            date.append(str(today))
+            date_delta = timedelta(days=-1)
+            for i in range (date_interval-1):
+                date.append(str(today + date_delta))
+                date_delta = date_delta + timedelta(days=-1)
+
+            #previous = today + timedelta(days=-1)
             #nextDay = previous + timedelta(days=-1)
             #nextDay1 = nextDay + timedelta(days=-1)
             #nextDay2 = nextDay1 + timedelta(days=-1)
-            date.append(str(today))
-            date.append(str(previous))
+            
+            #date.append(str(previous))
             #date.append(str(nextDay))
             #date.append(str(nextDay1))
             #date.append(str(nextDay2))
