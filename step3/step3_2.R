@@ -10,5 +10,18 @@ for (fileName in fileNameList){
   print(fileName)
   d <- read.csv(fileName)
   result <- t.test(d$DirectlyApproveRate~d$CloseToReleaseDate)
-  print(result)
+  # print(result)
+
+  # h0: two means are similar 
+  # hAlpha: two means are different
+  # if p <= Alpha --> Against h0
+  # alpha = 0.01 99% confidence 
+
+  if (result$p.value <= 0.01) {
+    print(result)
+    print(result$p.value <= 0.01)
+  }
 }
+
+
+
