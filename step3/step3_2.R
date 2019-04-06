@@ -22,6 +22,3 @@ for (fileName in fileNameList){
     print(result$p.value <= 0.01)
   }
 }
-
-
-
