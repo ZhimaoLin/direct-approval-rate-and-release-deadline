@@ -1,3 +1,5 @@
+# Run Rscript step3_2.R
+
 wd <- paste(getwd(),  '/step3_results', sep = "", collapse = NULL)
 setwd(wd)
 getwd()
