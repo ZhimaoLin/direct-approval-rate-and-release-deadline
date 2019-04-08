@@ -2,6 +2,7 @@
 # https://stats.idre.ucla.edu/r/dae/logit-regression/
 # https://www.statmethods.net/advstats/glm.html
 # http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf
+# https://en.wikipedia.org/wiki/Wilcoxon_signed-rank_test
 
 wd <- paste(getwd(),  '/step3_results', sep = "", collapse = NULL)
 setwd(wd)
