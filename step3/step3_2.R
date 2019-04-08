@@ -5,13 +5,13 @@
 
 wd <- paste(getwd(),  '/step3_results', sep = "", collapse = NULL)
 setwd(wd)
-getwd()
+wd <- getwd()
 
 fileNameList <- c('couchbase-java-client_final.csv', 'couchbase-jvm-core_final.csv', 'eclipse.platform.ui_final.csv', 'egit_final.csv', 'ep-engine_final.csv', 'jgit_final.csv', 'linuxtools_final.csv', 'ns_server_final.csv', 'linuxtools_final.csv', 'spymemcached_final.csv', 'testrunner_final.csv')
 # fileNameList <- c('couchbase-jvm-core_final.csv')
 
 pValueThreshold <- 0.01
-onlyShowSignificant <- TRUE   # Enter TRUE or FALSE
+onlyShowSignificant <- FALSE   # Enter TRUE or FALSE
 
 for (fileName in fileNameList){
   d <- read.csv(fileName)
@@ -20,14 +20,13 @@ for (fileName in fileNameList){
   print('=============================================')
   print(fileName)
   print('=============================================')
-  print('|     T test                                |')
+  print('|     Wilcoxon signed-rank test             |')
   print('=============================================')
 
-  # h0: two means are similar 
-  # hAlpha: two means are different
-  # if p <= Alpha --> Against h0
-  # alpha = 0.01 99% confidence 
-  result <- t.test(d$DirectlyApproveRate~d$CloseToReleaseDate)
+  # If pValue <= pValueThreshold, the median of DirectAprovalRate between closedToReleaseDate and not closedToReleaseDate are significantly diffferent. 
+  # If pValue > pValueThreshold, there is NOT significant evidence shows that the median of DirectAprovalRate between closedToReleaseDate and not closedToReleaseDate are significantly diffferent.
+  
+  result <- wilcox.test(d$DirectlyApproveRate~d$CloseToReleaseDate, data=d)
   pValue <- result$p.value
 
   if (onlyShowSignificant == FALSE) {
@@ -62,3 +61,46 @@ for (fileName in fileNameList){
   cat('\n')
   cat('\n')
 }
+
+# Paired test
+allRepoRate <- data.frame(
+  repo_name = fileNameList,
+  closed_to_release_date = numeric(length(fileNameList)),
+  not_closed_to_release_date = numeric(length(fileNameList))
+)
+
+for (fileName in fileNameList) {
+  d <- read.csv(fileName)
+  d$CloseToReleaseDate <- factor(d$CloseToReleaseDate)
+
+  closedToReleaseDateMean <- mean(d[ which(d$CloseToReleaseDate=='True'), ]$DirectlyApproveRate)
+
+  notClosedToReleaseDateMean <- mean(d[ which(d$CloseToReleaseDate=='False'), ]$DirectlyApproveRate)
+
+  allRepoRate[ which(allRepoRate$repo_name==fileName), ]$closed_to_release_date <- closedToReleaseDateMean
+
+  allRepoRate[ which(allRepoRate$repo_name==fileName), ]$not_closed_to_release_date <- notClosedToReleaseDateMean
+}
+
+write.csv(allRepoRate, paste(wd,  '/all_repo_rate.csv', sep = "", collapse = NULL), row.names=FALSE)
+
+print('=============================================')
+print('        Paired Test Accross All Repos        ')
+print('=============================================')
+print('|     Wilcoxon signed-rank test             |')
+print('=============================================')
+
+# If pValue <= pValueThreshold, the median of DirectAprovalRate between closedToReleaseDate and not closedToReleaseDate are significantly diffferent. 
+# If pValue > pValueThreshold, there is NOT significant evidence shows that the median of DirectAprovalRate between closedToReleaseDate and not closedToReleaseDate are significantly diffferent.
+
+result <- wilcox.test(allRepoRate$closed_to_release_date, allRepoRate$not_closed_to_release_date, paired = TRUE)
+
+pValue <- result$p.value
+
+print(result)
+
+print('=============================================')
+cat('\n')
+cat('\n')
+cat('\n')
+
