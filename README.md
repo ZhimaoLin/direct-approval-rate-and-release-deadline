@@ -163,8 +163,18 @@ The csv file of each repository stores the following information:
   * A boolean variable shows if the code review is closed to the release date.
 
 
+`all_repo_rate.csv` constains the mean of code review direct approval rate when it is closed to release date and when it is not closed to release date for each reository. This result is used to conduct paired Wilcoxon signed-rank test.
 
+### Set date interval 
+Change the value of variable `date_interval` on **line 9** of `step3.py`. The value means the number of days before release date, which are considered it is closed to release date. For example, if you want to consider the code review is closed to release date if it is closed on the day before release date or on the release day, then set this value to `2`. 
+By default this value is `2`. <br>
+**Once you changed this value, you need to re-run step 3 and 4 in order to get the corresponding results**
 
+### Run 
+  ```python3 step3.py```
+
+### Run 
+  ```python3 step3.py```
 
 
 
