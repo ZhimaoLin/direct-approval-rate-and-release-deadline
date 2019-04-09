@@ -12,7 +12,7 @@ fileNameList <- c('couchbase-java-client_final.csv', 'couchbase-jvm-core_final.c
 # fileNameList <- c('couchbase-jvm-core_final.csv')
 
 pValueThreshold <- 0.01
-onlyShowSignificant <- TRUE   # Enter TRUE or FALSE
+onlyShowSignificant <- FALSE   # Enter TRUE or FALSE
 
 for (fileName in fileNameList){
   d <- read.csv(fileName)
