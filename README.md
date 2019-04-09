@@ -105,6 +105,8 @@ This step will generate `step1_results` folder that contains a csv file for each
 * close_time
   * The time that the code review is closed 
 
+### Download the dataset from [CROP](https://crop-repo.github.io) website and extract to `direct-approval-rate-and-release-deadline/step1` folder
+
 ### Open Terminal on your Mac and direct to our repo directory, `assignment5-sca-sz` using command `cd` <br>
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 ### Run 
