@@ -173,33 +173,17 @@ By default this value is `2`. <br>
 ### Run 
   ```python3 step3.py```
 
-### Run 
-  ```python3 step3.py```
+### Run Statistic Tests
+If you want to print the statistic test result on the Terminal, run <br>
+  ```rscript step3_2.R``` <br>
+
+If you want to output the statistic test result to a file, run <br>
+  ```rscript step3_2.R > ./step3_results/statistic_result.txt``` <br>
 
 
 
 
 
-
-
-
-
-
-.csv file for each repository. They are stored at `results/<repository name>/` separately. The csv file has the following structure:
-
-|date|commit_id|findbugs|pmd|
-|:-------------------|:---------:|:------:|:------:|
-|2015-11-03 09:39:13|601ce|2|79|
-|2015-11-03 09:39:13|8da58|3|79|
-|2015-11-03 15:53:24|b66b8|5|77|
-
-* `date` column contains the commit time of the commit. It is in the format: `YYYY-MM-DD HH:MM:SS`.
-* `commit_id` column contains the first 5 characters of the commit sha. 
-* `findbugs` column contains the number of warning/errors detected by Findbugs.
-* `pmd` column contains the number of warning/errors detected by PMD.
-
-### Run 
-  ```python3 step3.py```
 
 ## Step 4: 
 This step will generate all plots and charts asked by the assignment into [`images` folder](https://github.com/cmput402-w19/assignment5-sca-sz/tree/master/images).
