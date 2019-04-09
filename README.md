@@ -10,7 +10,7 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 
 
 
-# We picked following 10 repositories for our research:
+# We picked the following 10 repositories for our research:
 1. [eclipse.platform.ui](https://github.com/eclipse/eclipse.platform.ui)
 2. [linuxtools](https://github.com/eclipse/linuxtools)
 3. [jgit](https://github.com/eclipse/jgit)
