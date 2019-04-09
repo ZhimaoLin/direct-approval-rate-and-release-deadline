@@ -79,7 +79,8 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 
 
 ## Step 1: 
-This step will generate `step1_results` folder that contains a csv file for each repository. Each csv file contains the following information:
+This step will generate `step1_results` folder that contains a csv file for each repository. <br>
+Each csv file contains the following information:
 * review_number
   * The id of the code review 
 * revision_number
@@ -96,15 +97,16 @@ This step will generate `step1_results` folder that contains a csv file for each
 * close_date
   * The date that the code review is closed
 * close_time
-  * The time that the code review is closed 
+  * The time that the code review is closed
 
 ### Download the dataset from [CROP](https://crop-repo.github.io) website and extract to `direct-approval-rate-and-release-deadline/step1` folder
 Please go to [https://crop-repo.github.io/](https://crop-repo.github.io/) and click `Download` on the left-hand side bar. You can download a file called `corp.zip` on that page. <br>
 If you cannot find the dataset from above website, please check our backup repository [direct-approval-rate-and-release-deadline-dataset](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline-dataset), which contains a copy of the dataset that we use.
 
 
-### Open Terminal on your Mac and direct to our repo directory, `direct-approval-rate-and-release-deadline/step1` using command `cd` <br>
+### Open Terminal on your Mac and direct to step1 folder in our repository `direct-approval-rate-and-release-deadline/step1` using command `cd` <br>
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
+
 ### Run 
   ```python3 step1.py```
 
@@ -117,8 +119,11 @@ This step will generate `step2_results` folder, which contains a csv file for ea
 Please note that for GitHub API requests using Basic Authentication or OAuth, you can make up to **5000** requests per hour. Since the [eclipse.platform.ui](https://github.com/eclipse/eclipse.platform.ui) has over 6000 releases, we have to collect all release date and time in 3 steps with 1 hour cooling-down time between each step.
 
 ### Add your GitHub access token
-First generate your access token. If you have any problems with it, please check this help page: [https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). Then copy and paste you token in to line 6 of `step2_1.py`, `step2_2.py`, and `step2_3.py`. 
-You can also use our access token. Just simply comment line 6 and uncomment line 7. However, we highly recommend using your own GitHub access token because we cannot guarantee it will still work after May 1st, 2019. 
+First generate your access token. If you have any problems with it, please check this help page: [https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). Then copy and paste you token in to **line 6** of `step2_1.py`, `step2_2.py`, and `step2_3.py`. 
+You can also use our access token. Just simply comment **line 6** and uncomment **line 7**. However, we highly recommend using your own GitHub access token because we cannot guarantee it will still work after May 1st, 2019. 
+
+### Open Terminal on your Mac and direct to step2 folder in our repository `direct-approval-rate-and-release-deadline/step2` using command `cd` <br>
+  If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 
 ### Run 
   ```python3 step2_1.py```
@@ -136,7 +141,41 @@ You can also use our access token. Just simply comment line 6 and uncomment line
 
 
 ## Step 3: 
-This step will generate the .csv file for each repository. They are stored at `results/<repository name>/` separately. The csv file has the following structure:
+This step will generate the `step3_results` folder, which contains a csv file for each repository and a file called `all_repo_rate.csv`. <br>
+The csv file of each repository stores the following information: 
+* close_date
+  * We group the result of step1 by close_date for each repository.
+* ApproveAfterChange
+  * The number of code reviews that are approved with revision on that date
+* DirectlyApprove
+  * The number of code reviews that are approved without any revision on that date
+* Rejected
+  * The number of code review that are rejected on that day
+* TotalReview
+  * The total number of code reviews that are closed on that day
+* DirectlyApproveRate
+  * The percentage of the code reviews that are approved without any revision on that day.
+  * DirectlyApproveRate = DirectlyApprove / TotalReview
+* ApproveAfterChangeRate
+  * The percentage of the code reviews that are approved with some revision on that day.
+  * ApproveAfterChangeRate = ApproveAfterChange / TotalReview
+* CloseToReleaseDate
+  * A boolean variable shows if the code review is closed to the release date.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.csv file for each repository. They are stored at `results/<repository name>/` separately. The csv file has the following structure:
 
 |date|commit_id|findbugs|pmd|
 |:-------------------|:---------:|:------:|:------:|
