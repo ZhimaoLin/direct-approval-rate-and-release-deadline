@@ -45,9 +45,8 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 6. R version 3.5.2 (2018-12-20)
 
 ## Reproduce steps
-
 ### Step0: Preparation 
-1. Update your MacOS to MacOS Mojave Version 10.14.3 (The latest version on March 20th, 2019) <br> 
+1. Update your MacOS to MacOS Mojave Version 10.14.3 (The latest version on March 20th, 2019) or higher<br> 
    For more details, you can check [here](https://support.apple.com/en-ca/macos/mojave) or contact [Apple support](https://getsupport.apple.com/?caller=psp&PRKEYS=PF6)
 
 2. Install Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) <br>
@@ -77,7 +76,7 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 7. Install R version 3.5.2 <br>
     You can download R version 3.5.2 from [here](https://cran.cnr.berkeley.edu/bin/macosx/el-capitan/base/R-3.5.2.pkg) for Mac. If you are using other operating system, you can check the [R download page](https://cran.cnr.berkeley.edu/index.html). For more details, please check [R Manual](https://cran.cnr.berkeley.edu/index.html)
 
-8. Clone our repository
+
 
 
 
@@ -86,12 +85,25 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 [https://crop-repo.github.io/](https://crop-repo.github.io/)
 
 
-
-
-
-
 ## Step 1: 
-This step will generate `RepoFullNames.txt` that contains all the repository name. Each line contains a repository name. It will also generate `commits` folder, which contains the 30 commit sha and commit time of each repository.
+This step will generate `step1_results` folder that contains a csv file for each repository. Each csv file contains the following information:
+* review_number
+  * The id of the code review 
+* revision_number
+  * How many times that the code has been revised before the code review is approved 
+* status
+  * The status can be the followings:
+    * DirectlyApprove: Directly approved without any revision
+    * ApproveAfterChange: Approved after some revision
+    * Rejected: The code review is rejected
+* author
+  * The author who send the code review request
+* url
+  * The URL link of the code review record
+* close_date
+  * The date that the code review is closed
+* close_time
+  * The time that the code review is closed 
 
 ### Open Terminal on your Mac and direct to our repo directory, `assignment5-sca-sz` using command `cd` <br>
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
