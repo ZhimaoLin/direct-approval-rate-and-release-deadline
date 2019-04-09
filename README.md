@@ -8,6 +8,8 @@
 The [CROP](https://crop-repo.github.io) website provides code review record of 11 repositories in a period of time.
 To see the detail of our data. Please go to [https://crop-repo.github.io/](https://crop-repo.github.io/) and click `Dataset Details` on the left-hand side bar.
 
+
+
 # We picked following 10 repositories for our research:
 1. [eclipse.platform.ui](https://github.com/eclipse/eclipse.platform.ui)
 2. [linuxtools](https://github.com/eclipse/linuxtools)
@@ -20,15 +22,16 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 9. [couchbase-java-client](https://github.com/couchbase/couchbase-java-client)
 10. [spymemcached](https://github.com/couchbase/spymemcached)
 
+
+
 # How do we choose these ten repositories? 
 * We did not pick repository [indexing](https://github.com/couchbase/indexing) because it does not have any release. 
 * The main reason that we picked the other 10 repositories is that [CROP](https://crop-repo.github.io) provides very detailed code review information of those repositories. 
 * These 10 projects are not toy projects. They are written by well known communities, Eclipse and Couchbase. They are also being used in the industry. 
 
+
+
 # Instruction of reproducing our results
-
-
-
 ## Target machine and environment
 * Macbook Pro
 * MacOS Mojave Version 10.14.3
