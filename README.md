@@ -78,13 +78,6 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 
 
 
-
-
-
-## Download Data
-[https://crop-repo.github.io/](https://crop-repo.github.io/)
-
-
 ## Step 1: 
 This step will generate `step1_results` folder that contains a csv file for each repository. Each csv file contains the following information:
 * review_number
@@ -106,14 +99,36 @@ This step will generate `step1_results` folder that contains a csv file for each
   * The time that the code review is closed 
 
 ### Download the dataset from [CROP](https://crop-repo.github.io) website and extract to `direct-approval-rate-and-release-deadline/step1` folder
+Please go to [https://crop-repo.github.io/](https://crop-repo.github.io/) and click `Download` on the left-hand side bar. You can download a file called `corp.zip` on that page. <br>
+If you cannot find the dataset from above website, please check our backup repository [direct-approval-rate-and-release-deadline-dataset](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline-dataset), which contains a copy of the dataset that we use.
 
-### Open Terminal on your Mac and direct to our repo directory, `assignment5-sca-sz` using command `cd` <br>
+
+### Open Terminal on your Mac and direct to our repo directory, `direct-approval-rate-and-release-deadline/step1` using command `cd` <br>
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 ### Run 
   ```python3 step1.py```
 
+
+
 ## Step 2: 
-This step will generate `results` folder, which contains the analysis result of each repository using Findbugs and PMD. After you open `results` directory, you will see 5 directories, which are named after the 5 repository names. Each directory contains the result of the analysis of the repository. Results are divided in to 2 folders: `findbugs` and `pmd`. which contains the result of Findbugs and PMD respectively. Each folder contains 30 .txt files with the name of the first 5 characters of its commit sha. Findbugs results of the 30 commits are stored in the `findbugs` folder. PMD results of the 30 commits are stored in the `pmd` folder. 
+This step will generate `step2_results` folder, which contains a csv file for each repository. Each csv file stores the release date and time of each repository. 
+<br>
+
+Please note that for GitHub API requests using Basic Authentication or OAuth, you can make up to **5000** requests per hour. Since the [eclipse.platform.ui](https://github.com/eclipse/eclipse.platform.ui) has over 6000 releases, we have to collect all release date and time in 3 steps with 1 hour cooling-down time between each step.
+
+### Add your GitHub access token
+First generate your access token. If you have any problems with it, please check this help page: [https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). Then copy and paste you token in to line 6 of `step2_1.py`, `step2_2.py`, and `step2_3.py`. 
+You can also use our access token. Just simply comment line 6 and uncomment line 7. However, we cannot guarantee it will still work after May 1st, 2019. 
+
+
+
+
+
+
+dsafadsf
+
+
+
 
 ### Run chmod command to give the permision to run the shell script step2.sh
   ```chmod +x step2.sh```
