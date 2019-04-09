@@ -42,11 +42,11 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 3. Matplotlib version 3.0.3
 4. PyGithub Version 1.43.5 (January 29, 2019)
 5. Git version 2.17.2 (Apple Git-113)
+6. R version 3.5.2 (2018-12-20)
 
 ## Reproduce steps
-## Download Data
-[https://crop-repo.github.io/](https://crop-repo.github.io/)
-### Step0: Install dependencies
+
+### Step0: Preparation 
 1. Update your MacOS to MacOS Mojave Version 10.14.3 (The latest version on March 20th, 2019) <br> 
    For more details, you can check [here](https://support.apple.com/en-ca/macos/mojave) or contact [Apple support](https://getsupport.apple.com/?caller=psp&PRKEYS=PF6)
 
@@ -68,11 +68,27 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
     ```pip3 install PyGithub```
     For more details, you can check [PyGithub documentation](https://pygithub.readthedocs.io/en/latest/introduction.html#download-and-install)
 
-6. Install Git version 2.17.2 (Apple Git-113)
+6. Install Git version 2.17.2 (Apple Git-113) <br>
     Open Terminal on your Mac and run 
     ```git --version```
     to check if you have git on your Mac. 
     If you do not have git on your Mac, you can install it [here](https://git-scm.com/download/mac). For more details, you can check [Git documentation](https://git-scm.com/)
+
+7. Install R version 3.5.2 <br>
+    You can download R version 3.5.2 from [here](https://cran.cnr.berkeley.edu/bin/macosx/el-capitan/base/R-3.5.2.pkg) for Mac. If you are using other operating system, you can check the [R download page](https://cran.cnr.berkeley.edu/index.html). For more details, please check [R Manual](https://cran.cnr.berkeley.edu/index.html)
+
+8. Clone our repository
+
+
+
+
+## Download Data
+[https://crop-repo.github.io/](https://crop-repo.github.io/)
+
+
+
+
+
 
 ## Step 1: 
 This step will generate `RepoFullNames.txt` that contains all the repository name. Each line contains a repository name. It will also generate `commits` folder, which contains the 30 commit sha and commit time of each repository.
