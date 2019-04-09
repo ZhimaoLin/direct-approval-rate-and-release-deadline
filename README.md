@@ -118,22 +118,22 @@ Please note that for GitHub API requests using Basic Authentication or OAuth, yo
 
 ### Add your GitHub access token
 First generate your access token. If you have any problems with it, please check this help page: [https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). Then copy and paste you token in to line 6 of `step2_1.py`, `step2_2.py`, and `step2_3.py`. 
-You can also use our access token. Just simply comment line 6 and uncomment line 7. However, we cannot guarantee it will still work after May 1st, 2019. 
+You can also use our access token. Just simply comment line 6 and uncomment line 7. However, we highly recommend using your own GitHub access token because we cannot guarantee it will still work after May 1st, 2019. 
 
-
-
-
-
-
-dsafadsf
-
-
-
-
-### Run chmod command to give the permision to run the shell script step2.sh
-  ```chmod +x step2.sh```
 ### Run 
-  ```./step2.sh```
+  ```python3 step2_1.py```
+
+### Wait for 1 hour after finishing previous step due to GitHub API limitations. 
+
+### Run 
+  ```python3 step2_2.py```
+
+### Wait for 1 hour after finishing previous step due to GitHub API limitations. 
+
+### Run 
+  ```python3 step2_3.py```
+
+
 
 ## Step 3: 
 This step will generate the .csv file for each repository. They are stored at `results/<repository name>/` separately. The csv file has the following structure:
