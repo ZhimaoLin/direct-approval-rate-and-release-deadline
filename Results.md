@@ -168,8 +168,77 @@
         ![ns_server_2016_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/ns_server_2016_line_chart.png)
 
 7. [testrunner](https://github.com/couchbase/testrunner)
+    <br>
+    * 2011 <br>
+        ![testrunner_2011_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/testrunner_2011_line_chart.png)
+
+    * 2012 <br>
+        ![testrunner_2012_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/testrunner_2012_line_chart.png)
+
+    * 2013 <br>
+        ![testrunner_2013_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/testrunner_2013_line_chart.png)
+
+    * 2014 <br>
+        ![testrunner_2014_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/testrunner_2014_line_chart.png)
+
+    * 2015 <br>
+        ![testrunner_2015_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/testrunner_2015_line_chart.png)
+
+
+
 8. [ep-engine](https://github.com/couchbase/ep-engine)
+    <br>
+    * 2012 <br>
+        ![ep-engine_2012_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/ep-engine_2012_line_chart.png)
+
+    * 2013 <br>
+        ![ep-engine_2013_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/ep-engine_2013_line_chart.png)
+
+    * 2014 <br>
+        ![ep-engine_2014_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/ep-engine_2014_line_chart.png)
+
+    * 2015 <br>
+        ![ep-engine_2015_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/ep-engine_2015_line_chart.png)
+
+    * 2016 <br>
+        ![ep-engine_2016_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/ep-engine_2016_line_chart.png)
+
+
+
 9.  [couchbase-java-client](https://github.com/couchbase/couchbase-java-client)
+    <br>
+    * 2013 <br>
+        ![couchbase-java-client_2013_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/couchbase-java-client_2013_line_chart.png)
+
+    * 2014 <br>
+        ![couchbase-java-client_2014_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/couchbase-java-client_2014_line_chart.png)
+
+    * 2015 <br>
+        ![couchbase-java-client_2015_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/couchbase-java-client_2015_line_chart.png)
+
+    * 2016 <br>
+        ![couchbase-java-client_2016_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/couchbase-java-client_2016_line_chart.png)
+
 10. [spymemcached](https://github.com/couchbase/spymemcached)
+    <br>
+    * 2011 <br>
+        ![spymemcached_2011_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/spymemcached_2011_line_chart.png)
+
+    * 2012 <br>
+        ![spymemcached_2012_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/spymemcached_2012_line_chart.png)
+
+    * 2013 <br>
+        ![spymemcached_2013_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/spymemcached_2013_line_chart.png)
+
+    * 2014 <br>
+        ![spymemcached_2014_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/spymemcached_2014_line_chart.png)
+
+    * 2015 <br>
+        ![spymemcached_2015_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/spymemcached_2015_line_chart.png)
+
+    * 2016 <br>
+        ![spymemcached_2016_line_chart.png](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/step4/step4_results/spymemcached_2016_line_chart.png)
+
+
 
 
