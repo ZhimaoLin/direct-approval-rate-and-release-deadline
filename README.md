@@ -90,7 +90,7 @@ You can run `run.sh` described in this `Quick Start`. This will automatically ru
 ### Run 
   > ```./run.sh```
 
-If you prefer to run each step manually and reproduce the result in step 2, please follow the instructions below.
+If you prefer to run each step manually and **reproduce the result in step 2**, please follow the instructions below.
 
 
 
@@ -204,10 +204,7 @@ If you want to print the statistic test result on the Terminal, run
 
 
 ## Step 4: 
-This step will generate all plots and charts asked by the assignment into [`images` folder](https://github.com/cmput402-w19/assignment5-sca-sz/tree/master/images).
-* `<Repository name>_fingbugs.png` contains the box-plot of Fingbugs of that repository.
-* `<Repository name>_pmd.png` contains the box-plot of PMD of that repository.
-* `<Repository name>_line_chart.png` contains the line chart of the number of detected warnings/errors of that repository.
+This step will generate a boxplot and several line charts for each repository.
 
 ### Run 
   ```python3 step4.py```
