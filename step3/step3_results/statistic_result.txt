@@ -1,0 +1,489 @@
+[1] "============================================="
+[1] "couchbase-java-client_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 20162, p-value = 0.9319
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.6016  -1.5889   0.8060   0.8157   0.8157  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            0.95770    0.16479   5.812 6.18e-09 ***
+d$DirectlyApproveRate -0.02819    0.24445  -0.115    0.908    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 529.14  on 445  degrees of freedom
+Residual deviance: 529.13  on 444  degrees of freedom
+AIC: 533.13
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "couchbase-jvm-core_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 6730, p-value = 4.581e-07
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.8478  -0.8478  -0.4783  -0.3526   2.3701  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            -2.7465     0.3435  -7.995 1.29e-15 ***
+d$DirectlyApproveRate   1.9081     0.4063   4.696 2.65e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 361.83  on 369  degrees of freedom
+Residual deviance: 334.24  on 368  degrees of freedom
+AIC: 338.24
+
+Number of Fisher Scoring iterations: 5
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "eclipse.platform.ui_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 118380, p-value = 0.001038
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.6989  -1.4353   0.7988   0.8776   0.9398  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            0.58847    0.09746   6.038 1.56e-09 ***
+d$DirectlyApproveRate  0.58524    0.18425   3.176  0.00149 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1385.8  on 1127  degrees of freedom
+Residual deviance: 1375.5  on 1126  degrees of freedom
+AIC: 1379.5
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "egit_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 278960, p-value = 0.2511
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.6916  -1.5970   0.7507   0.7789   0.8095  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            0.94748    0.09402  10.077   <2e-16 ***
+d$DirectlyApproveRate  0.21005    0.14083   1.491    0.136    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1983.4  on 1740  degrees of freedom
+Residual deviance: 1981.2  on 1739  degrees of freedom
+AIC: 1985.2
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "ep-engine_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 92142, p-value = 0.3888
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.4860  -0.4739  -0.4627  -0.4562   2.1514  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            -2.2101     0.1254 -17.628   <2e-16 ***
+d$DirectlyApproveRate   0.1337     0.2340   0.571    0.568    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 958.02  on 1439  degrees of freedom
+Residual deviance: 957.70  on 1438  degrees of freedom
+AIC: 961.7
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "jgit_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 261310, p-value = 0.735
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.6433  -1.6369   0.7762   0.7787   0.7794  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            1.05026    0.09525  11.027   <2e-16 ***
+d$DirectlyApproveRate -0.01432    0.14019  -0.102    0.919    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1879.7  on 1637  degrees of freedom
+Residual deviance: 1879.7  on 1636  degrees of freedom
+AIC: 1883.7
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "linuxtools_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 68850, p-value = 0.01632
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.7438  -1.5107   0.7436   0.8041   0.8774  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)             0.7562     0.1293   5.847 4.99e-09 ***
+d$DirectlyApproveRate   0.5175     0.2087   2.480   0.0131 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1026.9  on 888  degrees of freedom
+Residual deviance: 1020.7  on 887  degrees of freedom
+AIC: 1024.7
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "ns_server_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 200180, p-value = 0.5736
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.5750  -1.5385   0.8321   0.8454   0.8550  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            0.89890    0.09795   9.177   <2e-16 ***
+d$DirectlyApproveRate -0.08090    0.15684  -0.516    0.606    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1669.4  on 1370  degrees of freedom
+Residual deviance: 1669.1  on 1369  degrees of freedom
+AIC: 1673.1
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "linuxtools_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 68850, p-value = 0.01632
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.7438  -1.5107   0.7436   0.8041   0.8774  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)             0.7562     0.1293   5.847 4.99e-09 ***
+d$DirectlyApproveRate   0.5175     0.2087   2.480   0.0131 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1026.9  on 888  degrees of freedom
+Residual deviance: 1020.7  on 887  degrees of freedom
+AIC: 1024.7
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "spymemcached_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 4099.5, p-value = 0.3791
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.8155   0.6538   0.6538   0.7322   0.7625  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)             1.4342     0.2457   5.838 5.28e-09 ***
+d$DirectlyApproveRate  -0.3478     0.3837  -0.906    0.365    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 221.29  on 210  degrees of freedom
+Residual deviance: 220.47  on 209  degrees of freedom
+AIC: 224.47
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "testrunner_final.csv"
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  d$DirectlyApproveRate by d$CloseToReleaseDate
+W = 287500, p-value = 0.005097
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+[1] "|     Logistics Regression                  |"
+[1] "============================================="
+
+Call:
+glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
+    data = d)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.5842  -1.4252   0.8358   0.9040   0.9940  
+
+Coefficients:
+                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)            0.44812    0.09914   4.520 6.18e-06 ***
+d$DirectlyApproveRate  0.47105    0.14964   3.148  0.00164 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2134.4  on 1686  degrees of freedom
+Residual deviance: 2124.5  on 1685  degrees of freedom
+AIC: 2128.5
+
+Number of Fisher Scoring iterations: 4
+
+[1] "============================================="
+
+
+
+[1] "============================================="
+[1] "        Paired Test Accross All Repos        "
+[1] "============================================="
+[1] "|     Wilcoxon signed-rank test             |"
+[1] "============================================="
+
+	Wilcoxon signed rank test with continuity correction
+
+data:  allRepoRate$closed_to_release_date and allRepoRate$not_closed_to_release_date
+V = 53, p-value = 0.08281
+alternative hypothesis: true location shift is not equal to 0
+
+[1] "============================================="
+
+
+
