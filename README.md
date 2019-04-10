@@ -78,6 +78,22 @@ To see the detail of our data. Please go to [https://crop-repo.github.io/](https
 
 
 
+## Quick Start
+You can run `run.sh` described in this `Quick Start`. This will automatically run from step 1 to 4. However, it will not reproduce step 2, instead, it will use the existing result in the `step2` folder to run step 3. 
+
+### Open Terminal on your Mac and direct to step1 folder in our repository `direct-approval-rate-and-release-deadline` using command `cd` <br>
+  If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
+
+### Run chmod command to give the permision to run the shell script run.sh
+  > ```chmod +x run.sh```
+
+### Run 
+  > ```./run.sh```
+
+If you prefer to run each step manually and reproduce the result in step 2, please follow the instructions below.
+
+
+
 ## Step 1: 
 This step will generate `step1_results` folder that contains a csv file for each repository. <br>
 Each csv file contains the following information:
@@ -110,7 +126,7 @@ If you cannot find the dataset from above website, please check our backup repos
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 
 ### Run 
-  ```python3 step1.py```
+  > ```python3 step1.py```
 
 
 
@@ -129,17 +145,17 @@ You can also use our access token. Just simply comment **line 6** and uncomment 
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 
 ### Run 
-  ```python3 step2_1.py```
+  > ```python3 step2_1.py```
 
 ### Wait for 1 hour after finishing previous step due to GitHub API limitations. 
 
 ### Run 
-  ```python3 step2_2.py```
+  > ```python3 step2_2.py```
 
 ### Wait for 1 hour after finishing previous step due to GitHub API limitations. 
 
 ### Run 
-  ```python3 step2_3.py```
+  > ```python3 step2_3.py```
 
 
 
@@ -166,7 +182,9 @@ The csv file of each repository stores the following information:
   * A boolean variable shows if the code review is closed to the release date.
 
 
-`all_repo_rate.csv` constains the mean of code review direct approval rate when it is closed to release date and when it is not closed to release date for each reository. This result is used to conduct paired Wilcoxon signed-rank test.
+`all_repo_rate.csv` constains the mean of code review direct approval rate when it is closed to release date and when it is not closed to release date for each reository. This result is used to conduct paired Wilcoxon signed-rank test. <br>
+
+If you choose to output the statistic result into a file, you will get a file called `statistic_result.txt` in the `step3_results` folder. It contains the `Wilcoxon signed-rank test` and `Logistics Regression` result of each repository. In addition, there is the `Paired Wilcoxon signed-rank test` result of all repositories. 
 
 ### Set date interval 
 Change the value of variable `date_interval` on **line 9** of `step3.py`. The value means the number of days before release date, which are considered it is closed to release date. For example, if you want to consider the code review is closed to release date if it is closed on the day before release date or on the release day, then set this value to `2`. 
@@ -174,17 +192,14 @@ By default this value is `2`. <br>
 **Once you changed this value, you need to re-run step 3 and 4 in order to get the corresponding results**
 
 ### Run 
-  ```python3 step3.py```
+  > ```python3 step3.py```
 
 ### Run Statistic Tests
-If you want to print the statistic test result on the Terminal, run 
-  > `rscript step3_2.R`
-
 If you want to output the statistic test result to a file, run 
-  > `rscript step3_2.R > ./step3_results/statistic_result.txt`
+  > ```rscript step3_2.R > ./step3_results/statistic_result.txt```
 
-
-
+If you want to print the statistic test result on the Terminal, run 
+  > ```rscript step3_2.R```
 
 
 
