@@ -74,7 +74,9 @@ def main():
                         close_date = date[1]
                         close_time = date[2]
                 
+                # Cannot find 'date: '
                 if l == '\n':
+                    print('Skiped file: [' + repo_name + '/' + review_number + '/' + discussion_file_name_last + '] due to no close date')
                     skipped_count += 1
 
                 review_table.loc[index, 'close_date'] = close_date
