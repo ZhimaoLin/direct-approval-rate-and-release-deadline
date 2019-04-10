@@ -204,7 +204,11 @@ If you want to print the statistic test result on the Terminal, run
 
 
 ## Step 4: 
-This step will generate a boxplot and several line charts for each repository.
+This step will generate a boxplot and several line charts for each repository. <br>
+
+The boxplot of each repository compares the distribution of the code review direct approval rate between code reviews closed to release date and those not closed to release date. <br>
+
+We draw 2 line charts for each repository each year. The first line chart shows the trend of code review direct approval rate and release date. The second line chart shows the trend of the total number of code reviews in that year.
 
 ### Run 
   ```python3 step4.py```
