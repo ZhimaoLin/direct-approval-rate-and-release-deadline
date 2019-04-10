@@ -178,10 +178,10 @@ By default this value is `2`. <br>
 
 ### Run Statistic Tests
 If you want to print the statistic test result on the Terminal, run 
-  > rscript step3_2.R
+  > `rscript step3_2.R`
 
 If you want to output the statistic test result to a file, run 
-  > rscript step3_2.R > ./step3_results/statistic_result.txt 
+  > `rscript step3_2.R > ./step3_results/statistic_result.txt`
 
 
 
