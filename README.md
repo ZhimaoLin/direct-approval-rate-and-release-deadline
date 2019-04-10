@@ -219,4 +219,10 @@ We draw 2 line charts for each repository each year. The first line chart shows 
 ### [Here is our results](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/Results.md)
 
 
+
+# Contact Us
+If you have any question, please feel free to contact us through our emails:
+* Shuonan Pei `spei@ualberta.ca`
+* Zhimao Lin `zhimao@ualberta.ca`
+
 # References
