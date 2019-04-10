@@ -214,8 +214,9 @@ We draw 2 line charts for each repository each year. The first line chart shows 
   ```python3 step4.py```
 
 
+
 # Results
-### [Here is our results](https://github.com/cmput402-w19/assignment5-sca-sz/blob/master/Results.md)
+### [Here is our results](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline/blob/master/Results.md)
 
 
 # References
