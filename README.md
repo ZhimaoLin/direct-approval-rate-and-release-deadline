@@ -99,6 +99,8 @@ Each csv file contains the following information:
 * close_time
   * The time that the code review is closed
 
+For each repository, it shows the number of files that we skip due to there is no close date in the discussion txt files. Also, `step1.py` clears all the rows contains invalid data such as `NA` before it outputs the result into csv files. 
+
 ### Download the dataset from [CROP](https://crop-repo.github.io) website and extract to `direct-approval-rate-and-release-deadline/step1` folder
 Please go to [https://crop-repo.github.io/](https://crop-repo.github.io/) and click `Download` on the left-hand side bar. You can download a file called `corp.zip` on that page. <br>
 If you cannot find the dataset from above website, please check our backup repository [direct-approval-rate-and-release-deadline-dataset](https://github.com/ZhimaoLin/direct-approval-rate-and-release-deadline-dataset), which contains a copy of the dataset that we use.
@@ -114,6 +116,7 @@ If you cannot find the dataset from above website, please check our backup repos
 
 ## Step 2: 
 This step will generate `step2_results` folder, which contains a csv file for each repository. Each csv file stores the release date and time of each repository. 
+
 <br>
 
 Please note that for GitHub API requests using Basic Authentication or OAuth, you can make up to **5000** requests per hour. Since the [eclipse.platform.ui](https://github.com/eclipse/eclipse.platform.ui) has over 6000 releases, we have to collect all release date and time in 3 steps with 1 hour cooling-down time between each step.
@@ -174,11 +177,11 @@ By default this value is `2`. <br>
   ```python3 step3.py```
 
 ### Run Statistic Tests
-If you want to print the statistic test result on the Terminal, run <br>
-  ```rscript step3_2.R``` <br>
+If you want to print the statistic test result on the Terminal, run 
+  > rscript step3_2.R
 
-If you want to output the statistic test result to a file, run <br>
-  ```rscript step3_2.R > ./step3_results/statistic_result.txt``` <br>
+If you want to output the statistic test result to a file, run 
+  > rscript step3_2.R > ./step3_results/statistic_result.txt 
 
 
 
