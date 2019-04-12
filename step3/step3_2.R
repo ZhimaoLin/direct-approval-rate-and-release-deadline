@@ -8,7 +8,7 @@ wd <- paste(getwd(),  '/step3_results', sep = "", collapse = NULL)
 setwd(wd)
 wd <- getwd()
 
-fileNameList <- c('couchbase-java-client_final.csv', 'couchbase-jvm-core_final.csv', 'eclipse.platform.ui_final.csv', 'egit_final.csv', 'ep-engine_final.csv', 'jgit_final.csv', 'linuxtools_final.csv', 'ns_server_final.csv', 'linuxtools_final.csv', 'spymemcached_final.csv', 'testrunner_final.csv')
+fileNameList <- c('couchbase-java-client_final.csv', 'couchbase-jvm-core_final.csv', 'eclipse.platform.ui_final.csv', 'egit_final.csv', 'ep-engine_final.csv', 'jgit_final.csv', 'linuxtools_final.csv', 'ns_server_final.csv', 'spymemcached_final.csv', 'testrunner_final.csv')
 # fileNameList <- c('couchbase-jvm-core_final.csv')
 
 pValueThreshold <- 0.01
