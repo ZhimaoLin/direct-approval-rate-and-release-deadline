@@ -343,49 +343,6 @@ Number of Fisher Scoring iterations: 4
 
 
 [1] "============================================="
-[1] "linuxtools_final.csv"
-[1] "============================================="
-[1] "|     Wilcoxon signed-rank test             |"
-[1] "============================================="
-
-	Wilcoxon rank sum test with continuity correction
-
-data:  d$DirectlyApproveRate by d$CloseToReleaseDate
-W = 68850, p-value = 0.01632
-alternative hypothesis: true location shift is not equal to 0
-
-[1] "============================================="
-[1] "|     Logistics Regression                  |"
-[1] "============================================="
-
-Call:
-glm(formula = d$CloseToReleaseDate ~ d$DirectlyApproveRate, family = "binomial", 
-    data = d)
-
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--1.7438  -1.5107   0.7436   0.8041   0.8774  
-
-Coefficients:
-                      Estimate Std. Error z value Pr(>|z|)    
-(Intercept)             0.7562     0.1293   5.847 4.99e-09 ***
-d$DirectlyApproveRate   0.5175     0.2087   2.480   0.0131 *  
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-(Dispersion parameter for binomial family taken to be 1)
-
-    Null deviance: 1026.9  on 888  degrees of freedom
-Residual deviance: 1020.7  on 887  degrees of freedom
-AIC: 1024.7
-
-Number of Fisher Scoring iterations: 4
-
-[1] "============================================="
-
-
-
-[1] "============================================="
 [1] "spymemcached_final.csv"
 [1] "============================================="
 [1] "|     Wilcoxon signed-rank test             |"
@@ -477,10 +434,10 @@ Number of Fisher Scoring iterations: 4
 [1] "|     Wilcoxon signed-rank test             |"
 [1] "============================================="
 
-	Wilcoxon signed rank test with continuity correction
+	Wilcoxon signed rank test
 
 data:  allRepoRate$closed_to_release_date and allRepoRate$not_closed_to_release_date
-V = 53, p-value = 0.08281
+V = 42, p-value = 0.1602
 alternative hypothesis: true location shift is not equal to 0
 
 [1] "============================================="
