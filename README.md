@@ -191,6 +191,9 @@ Change the value of variable `date_interval` on **line 9** of `step3.py`. The va
 By default this value is `2`. <br>
 **Once you changed this value, you need to re-run step 3 and 4 in order to get the corresponding results**
 
+### Open Terminal on your Mac and direct to step3 folder in our repository `direct-approval-rate-and-release-deadline/step3` using command `cd` <br>
+  If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
+
 ### Run 
   > ```python3 step3.py```
 
@@ -209,6 +212,9 @@ This step will generate a boxplot and several line charts for each repository. <
 The boxplot of each repository compares the distribution of the code review direct approval rate between code reviews closed to release date and those not closed to release date. <br>
 
 We draw 2 line charts for each repository each year. The first line chart shows the trend of code review direct approval rate and release date. The second line chart shows the trend of the total number of code reviews in that year.
+
+### Open Terminal on your Mac and direct to step3 folder in our repository `direct-approval-rate-and-release-deadline/step3` using command `cd` <br>
+  If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 
 ### Run 
   ```python3 step4.py```
