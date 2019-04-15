@@ -213,7 +213,7 @@ The boxplot of each repository compares the distribution of the code review dire
 
 We draw 2 line charts for each repository each year. The first line chart shows the trend of code review direct approval rate and release date. The second line chart shows the trend of the total number of code reviews in that year.
 
-### Open Terminal on your Mac and direct to step3 folder in our repository `direct-approval-rate-and-release-deadline/step3` using command `cd` <br>
+### Open Terminal on your Mac and direct to step4 folder in our repository `direct-approval-rate-and-release-deadline/step4` using command `cd` <br>
   If you do not know how to use command `cd`, you can Google it or check this [tutorial](https://macpaw.com/how-to/use-terminal-on-mac).
 
 ### Run 
